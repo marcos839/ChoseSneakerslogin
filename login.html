@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Login | Chose Sneakers</title>
+  <link rel="icon" href="./chose sneakers.png">
+
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Isometra&family=Zeyada&display=swap');
+
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, Helvetica, sans-serif;
+    }
+
+    body {
+      min-height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+      background-image: linear-gradient(to top right, black, rgba(119, 00, 0));
+      color: #000000;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 420px;
+      padding: 38px 32px;
+      background: #fffefe;
+      border: 1px solid #292929;
+      border-radius: 18px;
+      box-shadow: 0 15px 50px #0008;
+    }
+
+    h1 {
+      font-size: 28px;
+      margin-bottom: 5px;
+    }
+
+    .chose {
+        font-family: 'isometra', sans-serif;
+        color: black;
+      margin-bottom: 12px;
+      letter-spacing: 1px;
+    }
+
+    .chose strong {
+      color: #ff0000;
+    }
+
+    .subtitulo {
+      color: #8a8a8a;
+      font-size: 15px;
+      margin-bottom: 30px;
+    }
+
+    label {
+      display: block;
+      font-size: 14px;
+      margin-bottom: 9px;
+    }
+
+    input {
+      width: 100%;
+      padding: 14px;
+      margin-bottom: 20px;
+      color: #8a8a8a;
+      background: #222;
+      border: 1px solid #393939;
+      border-radius: 9px;
+      outline: none;
+      font-size: 15px;
+    }
+
+    input:focus {
+      border-color: #ce0000;
+      box-shadow: 0 0 0 2px #d7ff0020;
+    }
+
+    .recuperar-senha {
+      text-align: right;
+      margin-top: -8px;
+      margin-bottom: 23px;
+    }
+
+    a {
+      color: #dd0000;
+      text-decoration: none;
+      font-size: 13px;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    .botao-login {
+      width: 100%;
+      padding: 15px;
+      border: none;
+      border-radius: 9px;
+      background: #860000;
+      color: #ecebeb;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: 0.2s;
+    }
+
+    .botao-login:hover {
+      background: #490000;
+      transform: translateY(-1px);
+    }
+
+    .botao-login:disabled {
+      opacity: 0.6;
+      cursor: wait;
+      transform: none;
+    }
+
+    #mensagemLogin {
+      min-height: 20px;
+      margin-top: 16px;
+      font-size: 13px;
+      line-height: 1.5;
+      overflow-wrap: anywhere;
+    }
+
+    .cadastro {
+      margin-top: 24px;
+      text-align: center;
+      color: #000000;
+      font-size: 14px;
+    }
+
+    .cadastro a {
+      font-weight: bold;
+    }
+
+    .voltar {
+      display: block;
+      margin-top: 25px;
+      text-align: center;
+      color: #e00000;
+    }
+
+    .voltar:hover {
+      color: #860000;
+    }
+
+    @media (max-width: 480px) {
+      .login-container {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 25px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+
+  <main class="login-container">
+
+    <h1>Bem-vindo à</h1>
+
+    <h1 class="chose">
+      Chose<strong>Sneakers</strong>
+    </h1>
+
+    <p class="subtitulo">Entre na sua conta</p>
+
+    <form id="formLogin">
+
+      <label for="email">E-mail</label>
+      <input
+        type="email"
+        id="email"
+        placeholder="seuemail@exemplo.com"
+        autocomplete="email"
+        required
+      >
+
+      <label for="senha">Senha</label>
+      <input
+        type="password"
+        id="senha"
+        placeholder="Digite sua senha"
+        autocomplete="current-password"
+        required
+      >
+
+      <p class="recuperar-senha">
+        <a href="#" id="esqueciSenha">Esqueci minha senha</a>
+      </p>
+
+      <button class="botao-login" id="botaoLogin" type="submit">
+        Entrar
+      </button>
+
+      <p id="mensagemLogin" role="status" aria-live="polite"></p>
+
+    </form>
+
+    <p class="cadastro">
+      Ainda não tem conta?
+      <a href="index.html">Cadastre-se</a>
+    </p>
+
+    <a href="../home/home.html" class="voltar">
+      ← Voltar para a loja
+    </a>
+
+  </main>
+
+  <script type="module" src="login.js">
+  </script>
+
+</body>
+</html>
